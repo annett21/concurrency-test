@@ -11,6 +11,8 @@ python = "^3.10"
 Django = "^4.1.6"
 requests = "^2.28.2"
 python-dotenv = "^0.21.1"
+aiohttp = "^3.8.3"
+httpx = "^0.23.3"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
