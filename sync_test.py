@@ -1,13 +1,19 @@
 import requests
 import time
+from dotenv import load_dotenv
+import os
 
 
-all_urls = (f"http://127.0.0.1:8000/static/{x}" for x in range(1, 16))
+load_dotenv()
+
+
+ngrok_url = os.getenv("NGROK_URL")
+
 start_time = time.time()
-for _ in range(100):
-    for url in all_urls:
-        resp = requests.get(url, headers={'Cache-Control': 'no-cache'})
-        assert resp.status_code == 200
+for url in (f"{ngrok_url}/static/{x}" for x in range(1, 16)):
+    resp = requests.get(url)
+    assert resp.status_code == 200
 end_time = time.time()
+
 print("Done!")
 print(end_time - start_time)
