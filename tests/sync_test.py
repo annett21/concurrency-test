@@ -1,16 +1,11 @@
 import requests
 import time
-from dotenv import load_dotenv
-import os
+from utils import get_static_url
 
-
-load_dotenv()
-
-
-ngrok_url = os.getenv("NGROK_URL")
 
 start_time = time.time()
-for url in (f"{ngrok_url}/static/{x}" for x in range(1, 16)):
+static_url = get_static_url()
+for url in (static_url + str(filename) for filename in [1, 6, 11]):
     resp = requests.get(url)
     assert resp.status_code == 200
 end_time = time.time()
