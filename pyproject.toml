@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "concurrency-test"
+version = "0.1.0"
+description = ""
+authors = ["annett21 <annettarasevich@gmail.com>"]
+readme = "README.md"
+packages = [{include = "concurrency_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.6"
+requests = "^2.28.2"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^23.1.0"
+ptpython = "^3.0.22"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
