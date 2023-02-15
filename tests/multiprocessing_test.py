@@ -30,5 +30,9 @@ if __name__ == "__main__":
 
     end_time = time.time()
 
+    time_spent = end_time - start_time
     print("Done!")
-    print(end_time - start_time)
+    print(time_spent)
+
+    with open("test_statistic.txt", "a") as f:
+        f.write(f"The multiprocessing_test was completed in: {time_spent}.\n")

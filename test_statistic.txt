@@ -1,0 +1,4 @@
+The sync_test was completed in: 38.140228271484375..
+The multithreading_test was completed in: 36.5707471370697.
+The multiprocessing_test was completed in: 38.487786054611206.
+The async_test was completed in: 47.42253494262695.

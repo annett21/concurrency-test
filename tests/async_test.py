@@ -25,4 +25,7 @@ if __name__ == '__main__':
     start_time = time.time()
     asyncio.run(main())
     end_time = time.time()
-    print(end_time - start_time)
+    time_spent = end_time - start_time
+    print(time_spent)
+    with open("test_statistic.txt", "a") as f:
+        f.write(f"The async_test was completed in: {time_spent}.\n")
